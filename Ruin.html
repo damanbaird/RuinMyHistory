@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="Ruin.js"></script>
+        <script>
+            /* Ruin.js creates the site_list var that this uses. */
+
+            var counter = 0;
+
+            var popup = null;
+
+            function randint(min_, max_) {
+                min_ = Math.ceil(min_);
+                max_ = Math.floor(max_);
+                return Math.floor(Math.random() * (max_ - min_ + 1)) + min_;
+            }
+
+            function changeFrameSite() {
+                popup.location.href = site_list[randint(0, site_list.length)];
+            }
+
+            function doOnReady() {
+                popup = window.open(site_list[0]);
+                setInterval(changeFrameSite, 8000);
+            }
+
+            $(document).ready(doOnReady);
+        </script>
+    </head>
+
+    <body>
+        <p>Author's note: This project is no longer being maintained by original aurthor.</p>
+        <p>RuinMyHistory will open a popup window that cycles through different websites.</p>
+        <p>The aim of this website is to pollute your web history so that it becomes worthless to potential buyers.</p>
+        <br />
+        <p>Idea by <a href="https://github.com/fascinatedbox">FascinatedBox</a>. Hosted by <a href="https://github.com/fascinatedbox/RuinMyHistory/">github</a>.</p>
+    updated on 1/13/2021 by <a href="https://github.com/damanbaird">damanbaird</a>.
+</body>
+</html>
