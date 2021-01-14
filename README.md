@@ -1,5 +1,4 @@
-Author's note: This project is no longer being maintained.
-
+ This project is no longer being maintained by original aurthor.
 
 Below this line is the original commit.
 
